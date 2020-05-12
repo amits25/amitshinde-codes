@@ -1,0 +1,363 @@
+
+kpit@L-9569:~/Desktop/140493/Locdown_2020/c-to-mysql$ ./output-file 
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+1
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Location  
+ # MyGuests  
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+2
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Location  
+ # MyGuests  
+
+Enter Table Name ::MyGuests
+MySQL Tables contains from table:: MyGuests
+* 1 |AMIT |shindeeeee |amits25@outlook.com |2020-04-22 11:26:29 |
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+3
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Location  
+ # MyGuests  
+
+Enter Table Name ::Location
+MySQL Tables contains from table:: Location
+* 2 |2 |full |empty |
+* 3 |MUMBAI |200 |80 |
+
+ num_field ::4
+ SHOW COLUMNS FROM Location
+MySQL Location table colums name and type and present values::
+0 # id :: int(11) :: 3 
+
+1 # city :: varchar(100) :: MUMBAI 
+
+2 # tempreture :: varchar(100) :: 200 
+
+3 # humidity :: varchar(100) :: 80 
+
+
+ How much column do you want to uodate out of 4::1
+
+ Enter column name::humidity
+
+Enter values for column::200
+print Unic column::
+id
+
+ Enter uniqe value for unique::3
+
+ Execute Query= UPDATE Location SET humidity ='200' WHERE id ='3' 
+Enter Table Name ::Location
+MySQL Tables contains from table:: Location
+* 2 |2 |full |empty |
+* 3 |MUMBAI |200 |200 |
+return
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+4
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Location  
+ # MyGuests  
+
+Enter Table Name ::Location
+MySQL Tables contains from table:: Location
+* 2 |2 |full |empty |
+* 3 |MUMBAI |200 |200 |
+
+ num_field ::4
+ SHOW COLUMNS FROM Location
+MySQL Location table colums name and type::
+0 # id :: int(11) 
+
+1 # city :: varchar(100) 
+
+2 # tempreture :: varchar(100) 
+
+3 # humidity :: varchar(100) 
+
+ for id::
+Enter value to be insert into cloumn::
+4
+ for city::
+Enter value to be insert into cloumn::
+Dehli
+ for tempreture::
+Enter value to be insert into cloumn::
+20
+ for humidity::
+Enter value to be insert into cloumn::
+40
+
+ &&& insert into Location ( id, city, tempreture, humidity )values( '4', 'Dehli', '20', '40' )
+
+Enter Table Name ::Location
+MySQL Tables contains from table:: Location
+* 2 |2 |full |empty |
+* 3 |MUMBAI |200 |200 |
+* 4 |Dehli |20 |40 |
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+5
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Location  
+ # MyGuests  
+
+ Enter Tbale Name::
+Example
+
+ Enter Column Count::
+3
+
+ Enter 1 column name::id
+
+ Enter Type for Column id ::int
+
+ Enter 2 column name::name
+
+ Enter Type for Column name ::varchar(100)
+
+ Enter 3 column name::lastname
+
+ Enter Type for Column lastname ::varchar(100)
+create table Example ( id int , name varchar(100) , lastname varchar(100) ) 
+DESCRIBE table Example ::
+ * id | int(11) | YES |  | (null) |  | 
+ * name | varchar(100) | YES |  | (null) |  | 
+ * lastname | varchar(100) | YES |  | (null) |  | 
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+4
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Example  
+ # Location  
+ # MyGuests  
+
+Enter Table Name ::Example
+MySQL Tables contains from table:: Example
+
+ num_field ::3
+ SHOW COLUMNS FROM Example
+MySQL Example table colums name and type::
+0 # id :: int(11) 
+
+1 # name :: varchar(100) 
+
+2 # lastname :: varchar(100) 
+
+ for id::
+Enter value to be insert into cloumn::
+1
+ for name::
+Enter value to be insert into cloumn::
+Amit
+ for lastname::
+Enter value to be insert into cloumn::
+shinde
+
+ &&& insert into Example ( id, name, lastname )values( '1', 'Amit', 'shinde' )
+
+Enter Table Name ::Example
+MySQL Tables contains from table:: Example
+* 1 |Amit |shinde |
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+6
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Example  
+ # Location  
+ # MyGuests  
+
+Enter Table Name ::Example
+MySQL Tables contains from table:: Example
+* 1 |Amit |shinde |
+
+ enter column NAME on basis you want to delete row::id
+
+ enter column VALUE on basis you want to delete row::1
+
+ delete from Example where id='1'
+Enter Table Name ::Example
+MySQL Tables contains from table:: Example
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+7
+MySQL client version: 5.7.29
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Example  
+ # Location  
+ # MyGuests  
+
+ Enter table Name to Delete::Example
+
+ drop table Example
+ Table Example deleted
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+1
+MySQL  database:
+ # information_schema  
+ # kpit  
+ # mysql  
+ # performance_schema  
+ # sys  
+Ebter schema name::kpit
+MySQL  database tables::
+ # Location  
+ # MyGuests  
+
+##################################################
+Enter Your Choice::
+ *1. To Select Schema
+ *2. To Execute Select Query
+ *3. TO Execute Update Query
+ *4. TO Execute Insert Query
+ *5. TO Execute Create-Table Query
+ *6. TO Execute Delete from Table Query
+ *7. TO Execute drop-Table Query
+ *0. To Exit
+0
+kpit@L-9569:~/Desktop/140493/Locdown_2020/c-to-mysql$ 
