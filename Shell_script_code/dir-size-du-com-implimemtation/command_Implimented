@@ -1,0 +1,8 @@
+1. du -hs :- commond shows total size of DIR
+    :-scripts::- /home/kpit/Desktop/140493/linux/Size_DIR:
+        Driver script: du_dir.sh :- genrate file (size.txt) which contains actual size of  all contains.
+        Driven Script: size_count.sh: shows total size of DIR
+
+2. cursore select: details on pop-up window
+
+3. 
