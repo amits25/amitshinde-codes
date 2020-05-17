@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<h1>login success</h1>
+{% if username %}
+<p class="error"><strong>wellcome:</strong> {{username  }}</p>
+      {% endif %}
+<form action="/home">
+     <input class="btn btn-default" type="submit" value="LogOut">
+</form>
+<form action="/userIMG">
+     <input class="btn btn-default" type="submit" value="IMG">
+</form>
+</body>
+</html>

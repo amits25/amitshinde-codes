@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdminPage</title>
+</head>
+<body>
+<img src="bmw.jpeg" alt="Smiley face" height="100" width="100">
+{% if username %}
+<p class="error"><strong>wellcome:</strong> {{username  }}</p>
+      {% endif %}
+ <form action="/adminfun" method="get">
+     <input class="btn btn-default" type="submit" value="show all">
+   </form>
+<form action="/home">
+     <input class="btn btn-default" type="submit" value="LogOut">
+</form>
+ <form action="/showIMG" method="get">
+     <input class="btn btn-default" type="submit" value="IMG_DB">
+   </form>
+<form action="/uploadimage" method="get">
+     <input class="btn btn-default" type="submit" value="UploadIMG">
+   </form>
+<form action="/dropdown" method="get">
+     <input class="btn btn-default" type="submit" value="SHoWDropDown">
+   </form>
+</body>
+</html>

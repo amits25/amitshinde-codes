@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Showall</title>
+    <script>
+               document.getElementById("srNoo").value = list[0];
+     </script>
+</head>
+<body >
+<h1>list of all registerd memebers</h1>
+ <table border="2">
+      <th>Sr.no</th>
+     <th>username</th>
+      <th>password</th>
+      <th>Del_Action</th>
+     <th>Update_Action</th>
+{% for list in row %}
+<form action="/deleteThis" method='post'>
+
+        <tr>
+            <td> {{list[0]}}
+            </td>
+            <td><input id="srNoo" type="text" name="val" value='{{list[1]}}' readonly></td>
+            <td>{{ list[2] }}</td>
+            <td>
+                 <input class="btn btn-default" name="delete" type="submit" value="Delete">
+
+            </td>
+              </form>
+            <td>
+                <form method="post" action="/updtaerow">
+                 <input id="srNoo11" type="hidden" name="vall" value='{{list[1]}}'>
+                 <input class="btn btn-default" name="update" type="submit" value="Update">
+                    </form>
+
+            </td>
+
+        </tr>
+
+{% endfor %}
+
+ </table>
+ {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+<form action="/backtoadmin" method="get">
+     <input class="btn btn-default" type="submit" value="Back">
+   </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vies</title>
+</head>
+<body>
+<h1>list of all cars </h1>
+{% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+ <table border="2">
+      <th>SRNo</th>
+     <th>IMG</th>
+     <th>DELETE_IMG</th>
+{% for list in row %}
+
+
+        <tr>
+            <td> {{list[0]}}
+            </td>
+            <td>
+
+                <img src='{{list[1]}}' alt="BMW face" height="100" width="100"></td>
+            <td>
+             <form method="post" action="/deleteIMG">
+                 <input id="srNoo11" type="hidden" name="vall" value='{{list[1]}}'>
+                 <input class="btn btn-default" name="deletebtn" type="submit" value="Delete">
+                    </form>
+            </td>
+
+
+
+        </tr>
+
+{% endfor %}
+
+ </table>
+<form action="/backtoadmin">
+     <input class="btn btn-default" type="submit" value="back">
+</form>
+</body>
+</html>

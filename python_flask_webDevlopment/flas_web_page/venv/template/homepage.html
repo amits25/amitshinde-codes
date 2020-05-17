@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
+    <title>Homepage</title>
+</head>
+ <body>
+   <form action="/login" method="get">
+     <input class="btn btn-default" type="submit" value="Login">
+   </form>
+
+   <form action="/reg1" method="get">
+     <input class="btn btn-default" type="submit" value="register">
+   </form>
+   <form action="/sms" method="get">
+     <input class="btn btn-default" type="submit" value="email">
+   </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+ </body>
+</html>

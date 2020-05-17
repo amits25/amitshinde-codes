@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+ <form action="/updtaerow2" method="post">
+
+             <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Username" name="username" value='{{row[1]}}' readonly>
+          <label for="psw"><b>Password</b></label>
+         <input type="text" placeholder="Password" name="password" value='{{row[2]}}'>
+
+        <input class="btn btn-default" type="submit" value="Update">
+
+      </form>
+       {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+</body>
+</html>
