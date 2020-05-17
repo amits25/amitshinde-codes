@@ -1,0 +1,56 @@
+##########################################
+Delpoy python web app on docker container
+#############################################
+
+1. create any directory
+   - create Dockerfile  (name Dockerfile)
+   - create requirements.txt (name  requirements.txt)
+
+Ex:
+ 
+
+ Dockerfile:
+
+	# this line will download and insatall python 3.7 platform on container
+	FROM python:alpine3.7 
+	
+	# this command will copy all contains from current dir and copy to /app dir in container.
+	# you can specifie your app path from your local machine i.e COPY /home/kpit/myapp/ /app  ( COPY sourceDIR_on_local_machine  Destination_Dir_on_container)
+	COPY . /app
+
+	#you have to specifie working dir name from container( most of time it is same as Destination_Dir_on_container)
+	WORKDIR /app
+
+	# where in requirements.txt you have to mention dependencies of your application
+	# EX: any lib or module has to be imported
+	RUN pip install -r requirements.txt 
+
+	# container port has to be specified for accessing purpose
+	EXPOSE 5001 
+
+	# ENTRYPOINT means command that need to be run your appliaction  (python /app/flas_web_page/venv/loginpage.py)
+	ENTRYPOINT [ "python" ] 
+	CMD [ "/app/flas_web_page/venv/loginpage.py" ] 
+
+
+ requirements.txt:
+	# requirements.txt will be read line by line and installed that module to container (ex:  pip install flask)
+	flask
+	Werkzeug
+
+
+
+# command to Build Docker images for your Dockerfile
+
+	$ docker build --tag flask_docker_app .
+	# --tag option takes two agr 1. name for image 2. contains to be added (here . means current dir)
+	# to check docker images execute command 
+	$ docker images
+	# here you will see your images
+
+
+# command to run Docker image with docker conatiner
+	$ sudo docker run --name flask-docker-demo-app-final11 -p 5001:5001 flask_docker_app
+        # here --name option will have cotainer name 
+	# -p option will have conatiner port on which you wants to access it
+	# here flask_docker_app is the docker images which you want to run on container
