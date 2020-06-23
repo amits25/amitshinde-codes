@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMG-pull-status</title>
+</head>
+<body>
+
+<A href="http://10.1.38.0:9000/" target="_blank" rel="noopener noreferrer"> click here to see process output </A>
+{% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+
+<br>
+<br>
+{% if res %}
+        <p class="status"><strong>Error:</strong> {{ res }}
+      {% endif %}
+
+<br>
+<br>
+<p3><strong>To Docker Images List</strong></p3>
+  <form method="get" action="/Docker_Image_creator">
+    <input class="btn btn-default" name="Stop_con" type="submit" value="List-IMG">
+   </form>
+
+
+</body>
+</html>

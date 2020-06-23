@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Con-Start_Status</title>
+</head>
+<body>
+{% if error %}
+        <p class="error"><strong>Status:</strong> {{ error }}
+      {% endif %}
+<br><br>
+<A href="http://10.1.38.0:9000/" target="_blank" rel="noopener noreferrer"> click here to see process output </A>
+{% if res %}
+        <p class="error"><strong>Status:</strong> {{ res }}
+      {% endif %}
+<br><br>
+<form method="post" action="/Docker_container_exec_page">
+    <input id="con_exec_id" type="hidden" name="con_exec_id123" value='{{Id}}'>
+    <input class="btn btn-default" name="Delete-con" type="submit" value="Exec-command">
+</form>
+
+<br>
+  <form method="get" action="/Docker_container_list">
+      <input class="btn btn-default" name="Delete-con" type="submit" value="Back">
+  </form>
+
+</body>
+</html>

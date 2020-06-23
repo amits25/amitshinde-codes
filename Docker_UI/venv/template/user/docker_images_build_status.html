@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMG-Build-Status</title>
+</head>
+<body>
+
+<A href="http://10.1.38.0:9000/" target="_blank" rel="noopener noreferrer"> click here to see process output </A>
+ {% if err %}
+        <p class="error"><strong>Status:</strong> {{ err }}
+      {% endif %}
+
+<br>
+<br>
+<p3>To List Of Docker Images</p3>
+<form action="/Docker_Image_creator" method="get">
+     <input class="btn btn-default" type="submit" value="Docker-Image">
+   </form>
+</body>
+</html>

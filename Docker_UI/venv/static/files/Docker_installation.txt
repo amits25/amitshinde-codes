@@ -1,0 +1,51 @@
+##DOCKER##  (linux 16.04 LTS)
+=======================================================================
+1. sudo apt-get purge docker lxc-docker docker-engine docker.io
+2. sudo apt-get install  curl  apt-transport-https ca-certificates software-properties-common
+3. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
+4. sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+5. sudo apt-get update
+6. sudo apt-get install docker-ce
+7. sudo systemctl status docker
+=======Installation Complited==========
+login to root user
+1. sudo -i 0R sudo su
+2. sudo usermod -a -G docker $USER
+3. mkdir /etc/systemd/system/docker.service.d
+4. vi /etc/systemd/system/docker.service.d/http-proxy.conf
+   = [Service]
+     Environment="HTTP_PROXY=http://proxy.example.com:80/"                 
+5. sudo systemctl daemon-reload
+6. sudo systemctl show --property Environment docker
+7. sudo systemctl restart docker
+8. docker pull hello-world:latest
+9. docker run hello-world
+
+-------------------------------------------------------
+           #Links
+---------------------------------------------------
+
+https://www.docker.com/   OR https://hub.docker.com/
+
+https://labs.play-with-docker.com   #url terminal
+
+https://devopscube.com/kubernetes-tutorials-beginners/
+
+https://afourtech.com/guide-docker-commands-examples/
+
+--------------------------------------------------------
+https://tecadmin.net/install-docker-on-ubuntu/
+
+https://tecadmin.net/tutorial/docker/docker-tutorials/
+
+https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy     # proxy problem
+
+sudo usermod -a -G docker $USER   # add docker to user groups
+ 
+============================================================================
+https://wiki.gentoo.org/wiki/Nano/Basics_Guide   # nano file command
+----------------------------------------------------------------------------------------------------------------------
+
+==========================================
+
+

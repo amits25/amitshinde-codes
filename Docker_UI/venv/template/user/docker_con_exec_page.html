@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exec-page</title>
+</head>
+<body>
+<p3>selected conatiner ID: {{ID}}</p3>
+<br>
+<br>
+ <label for="Command"><b>Exec-Command</b></label>
+  <form action="/Docker_container_exec" method="post">
+        <input type="text" placeholder="exec-command" name="con_exec_cmd" >
+        <input id="con_exec_id" type="hidden" name="con_exec_id" value='{{ID}}'>
+           <input class="btn btn-default" type="submit" value="execute-command">
+            </form>
+</body>
+</html>

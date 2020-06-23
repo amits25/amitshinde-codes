@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images-List</title>
+</head>
+<body>
+<h1>list of all Docker Images </h1>
+ <table border="2">
+      <th>Sr.No</th>
+      <th>Name</th>
+     <th>Tag</th>
+      <th>IMG_ID</th>
+      <th>Size</th>
+       <th>Delete_IMG</th>
+       <th>Run_IMG</th>
+{% for i in range(0, count) %}
+
+
+        <tr>
+             <td> {{i}}
+            </td>
+            <td> {{repo[i]}}
+            </td>
+             <td> {{tag[i]}}
+            </td>
+             <td> {{Iid[i]}}
+            </td>
+             <td> {{size[i]}}
+            </td>
+             <td>
+                  <form method="post" action="/delete_IMG">
+                 <input id="img_id" type="hidden" name="img_id" value='{{Iid[i]}}'>
+                 <input class="btn btn-default" name="Delete-IMG" type="submit" value="delete-IMG">
+                    </form>
+            </td>
+              <td>
+                  <form method="post" action="/run_IMG">
+                 <input id="img_run_id" type="hidden" name="img_run_id" value='{{Iid[i]}}'>
+                 <input class="btn btn-default" name="Run-IMG" type="submit" value="Run-IMG">
+                    </form>
+            </td>
+
+
+
+
+        </tr>
+
+{% endfor %}
+
+ </table>
+<br>
+<br>
+<p3>Back to main page</p3>
+  <form method="get" action="/main-menu">
+                 <input class="btn btn-default" name="Stop_con" type="submit" value="back-to-menu">
+                    </form>
+
+<br>
+<br>
+<p3><strong>To Pull Docker Images From docker Hub</strong></p3>
+  <form method="get" action="/docker_Ing_pull">
+                 <input class="btn btn-default" name="Stop_con" type="submit" value="Pull-IMG">
+                    </form>
+
+<br>
+<br>
+<p3><strong>To Build Docker Images From Dockerfile and Requirement.txt</strong></p3>
+  <form method="get" action="/docker_Img_build">
+                 <input class="btn btn-default" name="Stop_con" type="submit" value="Build-IMG">
+                    </form>
+
+ {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+</body>
+</html>

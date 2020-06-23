@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMG_Run_Status</title>
+</head>
+<body>
+<A href="http://10.1.38.0:9000/" target="_blank" rel="noopener noreferrer"> click here to see process output </A>
+{% if error %}
+        <p class="error"><strong>Status:</strong> {{ error }}
+      {% endif %}
+<br><br>
+
+{% if res %}
+        <p class="Status"><strong>Status:</strong> {{ res }}
+      {% endif %}
+<br><br>
+<form method="post" action="/Docker_container_list">
+    <input id="img_run_id" type="hidden" name="img_run_id" value='{{Iid[i]}}'>
+    <input class="btn btn-default" name="con-list" type="submit" value="Con-List">
+</form>
+
+<br>
+  <form method="get" action="/Docker_Image_creator">
+      <input class="btn btn-default" name="Delete-con" type="submit" value="Back">
+  </form>
+
+</body>
+</html>

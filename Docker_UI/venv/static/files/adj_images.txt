@@ -1,0 +1,8 @@
+REPOSITORY TAG IMAGE ID CREATED SIZE
+ubuntu latest 74435f89ab78 4 days ago 73.9MB
+centos latest 831691599b88 4 days ago 215MB
+jenkins/jenkins latest ffc90f053d4b 2 weeks ago 656MB
+flask_docker_app latest 60ef981eb75f 5 weeks ago 120MB
+ubuntu 16.04 77be327e4b63 4 months ago 124MB
+hello-world latest bf756fb1ae65 5 months ago 13.3kB
+python alpine3.7 00be2573e9f7 16 months ago 81.3MB

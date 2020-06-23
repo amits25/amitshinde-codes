@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>container-list</title>
+    {% if err %}
+        <p class="error"><strong>Status:</strong> {{ err }}
+      {% endif %}
+<br><br>
+</head>
+<body>
+<h1>list of all Docker Containers </h1>
+ <table border="2">
+      <th>Sr.No</th>
+      <th>Name</th>
+     <th>Container_ID</th>
+      <th>IMG_ID</th>
+      <th>Command</th>
+       <th>Status</th>
+       <th>Port</th>
+      <th>Delete-Con</th>
+      <th>Start-Con</th>
+     <th>Stop-Con</th>
+{% for i in range(0, count) %}
+
+
+        <tr>
+             <td> {{i}}
+            </td>
+            <td> {{conName[i]}}
+            </td>
+             <td> {{conID[i]}}
+            </td>
+             <td> {{image[i]}}
+            </td>
+             <td> {{command[i]}}
+            </td>
+              <td> {{status[i]}}
+            </td>
+             <td> {{port[i]}}
+            </td>
+             <td>
+                  <form method="post" action="/delete_con">
+                 <input id="img_del_id" type="hidden" name="img_del_id" value='{{conID[i]}}'>
+                 <input class="btn btn-default" name="Delete-con" type="submit" value="delete">
+                    </form>
+            </td>
+              <td>
+                  <form method="post" action="/start_con">
+                 <input id="con_start_id" type="hidden" name="con_start_id" value='{{conID[i]}}'>
+                 <input class="btn btn-default" name="start_con" type="submit" value="Start">
+                    </form>
+            </td>
+              <td>
+                  <form method="post" action="/stop_con">
+                 <input id="con_stop_id" type="hidden" name="con_stop_id" value='{{conID[i]}}'>
+                 <input class="btn btn-default" name="Stop_con" type="submit" value="Stop">
+                    </form>
+            </td>
+        </tr>
+
+{% endfor %}
+
+ </table>
+
+<br>
+<br>
+<p3>Back to main page</p3>
+  <form method="get" action="/main-menu">
+      <input class="btn btn-default" name="Stop_con" type="submit" value="back-to-menu">
+  </form>
+
+</body>
+</html>

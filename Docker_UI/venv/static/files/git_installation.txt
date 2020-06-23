@@ -1,0 +1,31 @@
+=======================================================================================
+#Installing on Linux
+=======================================================================================
+1. If you want to install Git on Linux via a binary installer, you can generally do so
+   through the basic package-management tool that comes with your distribu-
+   tion. If you’re on Fedora for example, you can use yum:
+
+===>	$ sudo yum install git
+
+OR
+
+2. If you’re on a Debian-based distribution like Ubuntu, try apt-get:
+   Installing Git:
+
+===>    $ sudo apt-get install git
+
+---------------------------------------------------------------------------------------
+For more options, there are instructions for installing on several different
+Unix flavors on the Git website, at http://git-scm.com/download/linux
+---------------------------------------------------------------------------------------
+
+# Your Identity
+=======================================================================================
+The first thing you should do when you install Git is to set your user name and
+e-mail address. This is important because every Git commit uses this informa-
+tion, and it’s immutably baked into the commits you start creating:
+
+===>  $ git config --global user.name "John Doe"
+===>  $ git config --global user.email johndoe@example.com
+
+========================================================================================

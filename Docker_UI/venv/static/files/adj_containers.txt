@@ -1,0 +1,5 @@
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+7d6b10644bc8 60ef981eb75f "python /app/flas_we…" 2 days ago Exited (0) 2 days ago adoring_lehmann
+c870c9b52364 bf756fb1ae65 "/hello" 3 days ago Exited (0) 25 hours ago blissful_nobel
+c40f5f3dbb02 00be2573e9f7 "python3" 3 days ago Exited (0) 3 days ago focused_gould
+d1a9014c79fb jenkins/jenkins "/sbin/tini -- /usr/…" 2 weeks ago Exited (137) 25 hours ago jenkins-master

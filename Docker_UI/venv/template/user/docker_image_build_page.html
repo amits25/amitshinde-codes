@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build-IMG</title>
+    <style>
+        .inline-div {
+    display:inline-block;
+
+}
+.inline-txtarea {
+    resize: none;
+    border : 2px solid red;
+
+}
+    </style>
+</head>
+<body>
+
+<p3><strong> Write Dockerfile and Requirement.txt </strong></p3>
+
+<br>
+<br>
+ <form method="post" action="/docker_Img_build">
+     <label for="path1">Enter Name for Image </label><br>
+    <textarea name="name" cols="20" rows="1" placeholder="docker-IMG-mane"></textarea>
+     <br>
+     <label for="path1">Enter path from HOST machine to save files </label><br>
+    <textarea name="path1" cols="40" rows="1" placeholder="Directory-path"></textarea>
+     <br>
+     <br>
+     <div class="inline-div">
+     <label for="Dockerfile">Dockerfile</label>
+         <br>
+    <textarea name="Dockerfile" cols="40" rows="5" ></textarea>
+         </div>
+     <div class="inline-div">
+     <label for="Requirement.txt">Requirement.txt</label>
+         <br>
+    <textarea name="Requirement_txt" cols="40" rows="5"></textarea>
+         </div>
+     <br>
+       <label for="Checklist">ARG-Checklist</label>
+     <br>
+         <label for="--tag"> --tag</label><br>
+        <input type="checkbox" id="arg_tag" name="arg_tag" value="--tag">
+     <br>
+        <!-- <label for="contains">Directory-path which you want to add Data </label><br>
+    <textarea name="path" cols="40" rows="1" placeholder="Directory-path"></textarea>
+     <br> -->
+     <br>
+     <input class="btn btn-default" name="build_IMG" type="submit" value="Build-IMG">
+
+ </form>
+
+
+
+
+</body>
+</html>
